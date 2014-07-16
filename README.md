@@ -41,7 +41,7 @@ Every item in `files_list` is a
 [`File` object](https://developer.mozilla.org/en-US/docs/Web/API/File),
 extended with property `contents` containing loaded file contents:
 
-    $("img#my_img").attr('url', files_list[0].contents);
+    $("img#my_img").attr('url', files_list[0].content);
 
 To handle dialog cancelling, bind one more event handler:
 
