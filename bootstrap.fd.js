@@ -25,7 +25,7 @@
       </div>\
       <div class="modal-footer">\
         <button type="button" class="btn btn-primary bfd-ok">{{ok_button}}</button>\
-        <button type="button" class="btn btn-default bfd-cancel">{{cancel_button}}</button>\
+        <button type="button" class="btn btn-default bfd-cancel" data-dismiss="modal">{{cancel_button}}</button>\
       </div>\
     </div><!-- /.modal-content -->\
   </div><!-- /.modal-dialog -->\
@@ -165,12 +165,6 @@
             event.files = loaded_files;
             modal.trigger(event);
             done = true;
-            modal.modal('hide');
-        });
-        
-        $(".bfd-cancel", modal).on('click.bfd', function(ev) {
-            var event = $.Event('cancel.bs.filedialog');
-            modal.trigger(event);
             modal.modal('hide');
         });
         

@@ -39,7 +39,7 @@ To handle files choice when done, bind an event handler:
 
 Every item in `files_list` is a
 [`File` object](https://developer.mozilla.org/en-US/docs/Web/API/File),
-extended with property `contents` containing loaded file contents:
+extended with property `content` containing loaded file contents:
 
     $("img#my_img").attr('url', files_list[0].content);
 
