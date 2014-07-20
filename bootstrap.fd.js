@@ -1,3 +1,10 @@
+/**
+ * 
+ * @source: https://github.com/Saluev/bootstrap-file-dialog/blob/master/bootstrap.fd.js
+ * 
+ * Copyright (C) 2014 Tigran Saluev
+ * 
+ */
 (function($) {
     'use strict';
     
