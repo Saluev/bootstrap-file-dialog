@@ -1,3 +1,10 @@
+/**
+ * 
+ * @source: https://github.com/Saluev/bootstrap-file-dialog/blob/master/bootstrap.fd.js
+ * 
+ * Copyright (C) 2014 Tigran Saluev
+ * 
+ */
 (function($) {
     'use strict';
     
@@ -27,9 +34,9 @@
         <button type="button" class="btn btn-primary bfd-ok">{{ok_button}}</button>\
         <button type="button" class="btn btn-default bfd-cancel" data-dismiss="modal">{{cancel_button}}</button>\
       </div>\
-    </div><!-- /.modal-content -->\
-  </div><!-- /.modal-dialog -->\
-</div><!-- /.modal -->';
+    </div>\
+  </div>\
+</div>';
         modal_html = modal_html.replace(/{{title}}/g, options.title);
         modal_html = modal_html.replace(/{{ok_button}}/g, options.ok_button);
         modal_html = modal_html.replace(/{{cancel_button}}/g, options.cancel_button);
