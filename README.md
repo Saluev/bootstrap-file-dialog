@@ -27,7 +27,7 @@ Auxiliary string options for internationalization:
 * `ok_button`: caption of the OK button. Default: `OK`.
 * `cancel_button`: caption of the Cancel button. Default: `Close`.
 * `drag_message`: the central text of drop zone. Default: `Drop files here`.
-* `error message`: the message displayed on files that could not be loaded.
+* `error_message`: the message displayed on files that could not be loaded.
     Default: `An error occured while loading file`.
 
 To handle files choice when done, bind an event handler:
