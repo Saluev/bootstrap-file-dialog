@@ -11,7 +11,7 @@
   </head>
   <body>
     <button id="open_btn">Open files!</button>
-    <output></output>
+    <div id="output"></div>
 
     <script src="/bower_components/jquery/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -24,9 +24,9 @@
               files.forEach(function(f) {
                   text += f.name + "<br/>";
               });
-              $("output").html(text);
+              $("#output").html(text);
           }).on('cancel.bs.filedialog', function(ev) {
-              $("output").html("Cancelled!");
+              $("#output").html("Cancelled!");
           });
       });
     </script>
