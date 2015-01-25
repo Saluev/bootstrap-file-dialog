@@ -5,13 +5,13 @@ var gulp = require('gulp'),
   sass = require('gulp-sass');
 
 gulp.task('uglify', function() {
-  gulp.src('bootstrap.fd.js')
+  gulp.src('./src/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('dist'));
 })
 
 .task('sass', function() {
-  gulp.src('bootstrap.fd.css')
+  gulp.src('./src/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('dist'));
 })
@@ -19,15 +19,18 @@ gulp.task('uglify', function() {
 .task('webserver', function() {
   gulp.src('.')
     .pipe(webserver({
+      host: 'localhost',
+      port: 8000,
       livereload: true,
-      directoryListing: true,
-      open: true
+      directoryListing: false,
+      open: false,
+      fallback: 'example.html'
     }));
 })
 
 .task('watch', function(){
-  gulp.watch('bootstrap.fd.css', ['sass']);
-  gulp.watch('bootstrap.fd.js', ['uglify']);
+  gulp.watch('./src/*.scss', ['sass']);
+  gulp.watch('./src/*.js', ['uglify']);
 })
 
 .task('build', ['uglify', 'sass'])

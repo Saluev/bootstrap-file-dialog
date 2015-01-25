@@ -4,21 +4,22 @@
 }
 
 .bfd-dropfield-inner {
-  color: #888;
   border: 5px dashed #888;
-  text-align: center;
-  font-size: 32px;
+  color: #888;
   cursor: pointer;
-}
+  font-size: 32px;
+  text-align: center;
 
-.bfd-dropfield-inner:hover, .bfd-dropfield-inner.bfd-dragover {
-  color: #BBB;
-  border-color: #BBB;
+  &:hover, 
+  &.bfd-dragover {
+    border-color: #bbb;
+    color: #bbb;
+  }
 }
 
 .bfd-info {
   overflow: hidden;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .bfd-error-message {
