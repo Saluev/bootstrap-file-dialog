@@ -88,4 +88,4 @@ This "software" is proudly "distributed" under the MIT License, see `LICENSE`.
 
 ---------------------------------
 
-© Tigran Saluev, 2014.
+© Tigran Saluev, 2014-2015
