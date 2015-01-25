@@ -35,5 +35,5 @@ gulp.task('uglify', function() {
 
 .task('build', ['uglify', 'sass'])
 
-.task('default', ['webserver', 'watch']);
+.task('default', ['build', 'webserver', 'watch']);
 
