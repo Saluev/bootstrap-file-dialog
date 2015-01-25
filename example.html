@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap File Dialog</title>
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/dist/bootstrap.fd.css">
-  </head>
-  <body class="container">
-    <br />
-    <br />
-    <br />
-    <h2>Click blue button</h2>
-    <button id="open_btn" class="btn btn-primary">Open dialog</button>
-    <div id="output"></div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap File Dialog</title>
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/dist/bootstrap.fd.css">
+    </head>
+    <body class="container">
+        <br />
+        <br />
+        <br />
+        <h2>Click blue button</h2>
+        <button id="open_btn" class="btn btn-primary">Open dialog</button>
+        <div id="output"></div>
 
-    <script src="/bower_components/jquery/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/dist/bootstrap.fd.js"></script>
-    <script type="text/javascript">
-      $("#open_btn").click(function() {
-          $.FileDialog({multiple: true}).on('files.bs.filedialog', function(ev) {
-              var files = ev.files;
-              var text = "";
-              files.forEach(function(f) {
-                  text += f.name + "<br/>";
-              });
-              $("#output").html(text);
-          }).on('cancel.bs.filedialog', function(ev) {
-              $("#output").html("Cancelled!");
-          });
-      });
-    </script>
-  </body>
+        <script src="/bower_components/jquery/jquery.min.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/dist/bootstrap.fd.js"></script>
+        <script type="text/javascript">
+        $("#open_btn").click(function() {
+            $.FileDialog({multiple: true}).on('files.bs.filedialog', function(ev) {
+                var files = ev.files;
+                var text = "";
+                files.forEach(function(f) {
+                    text += f.name + "<br/>";
+                });
+                $("#output").html(text);
+            }).on('cancel.bs.filedialog', function(ev) {
+                $("#output").html("Cancelled!");
+            });
+        });
+        </script>
+    </body>
 </html>
