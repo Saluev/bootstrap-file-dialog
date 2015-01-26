@@ -1,0 +1,27 @@
+{
+    "name": "bootstrap-file-dialog",
+    "version": "0.0.1",
+    "homepage": "https://github.com/Saluev/bootstrap-file-dialog",
+    "authors": [
+        "Tigran Saluev"
+    ],
+    "description": "A simple file dialog using Bootstrap and jQuery",
+    "keywords": [
+        "bootstrap",
+        "jquery",
+        "filedialog",
+        "fileupload"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "~1.9.0",
+        "bootstrap": "~3.2.0"
+    }
+}

@@ -4,13 +4,22 @@
 
 Uses only jQuery and Bootstrap. Tested on jQuery 1.9.0 and Bootstrap 3.2.0.
 
+## Install
+
+Install via [bower](http://bower.io/):
+```bash
+$ bower install --save bootstrap-file-dialog
+```
+
 ## Usage
 
 Basic usage example can be found in `example.html`.
 
 To create (and open) a file dialog, run
 
-    var fd = $.FileDialog(options);
+```js
+var fd = $.FileDialog(options);
+```
 
 Supported options:
 
@@ -32,22 +41,46 @@ Auxiliary string options for internationalization:
 
 To handle files choice when done, bind an event handler:
 
-    fd.on('files.bs.filedialog', function(ev) {
-        var files_list = ev.files;
-        // ...
-    });
+```js
+fd.on('files.bs.filedialog', function(ev) {
+    var files_list = ev.files;
+    // ...
+});
+```
 
 Every item in `files_list` is a
 [`File` object](https://developer.mozilla.org/en-US/docs/Web/API/File),
 extended with property `content` containing loaded file contents:
 
-    $("img#my_img").attr('url', files_list[0].content);
+```js
+$("img#my_img").attr('url', files_list[0].content);
+```
 
 To handle dialog cancelling, bind one more event handler:
 
-    fd.on('cancel.bs.filedialog', function(ev) {
-        // ...
-    });
+```js
+fd.on('cancel.bs.filedialog', function(ev) {
+    // ...
+});
+```
+## Contributing
+```bash
+# Clone repository
+git clone git@github.com:Saluev/bootstrap-file-dialog.git
+cd bootstrap-file-dialog
+
+# Install required packages
+npm install
+bower install
+
+# Install gulp globally
+sudo npm install -g gulp
+
+# Run server (using default task)
+gulp
+
+# Now, open your browser at 0.0.0.0:8000/example.html and start edit sources
+```
 
 ## License
 
@@ -55,4 +88,4 @@ This "software" is proudly "distributed" under the MIT License, see `LICENSE`.
 
 ---------------------------------
 
-© Tigran Saluev, 2014.
+© Tigran Saluev, 2014-2015
