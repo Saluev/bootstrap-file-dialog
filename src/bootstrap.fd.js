@@ -123,12 +123,12 @@ $.FileDialog = function FileDialog(userOptions) {
             "placement": "top",
             "title": options.removeMessage
         }).on("click.bfd", function() {
-            reader.abort();
             var idx = loadedFiles.indexOf(f);
             if(idx >= 0) {
                 loadedFiles.pop(idx);
             }
             row.fadeOut();
+            reader.abort();
         });
         row = $("<div class='row'></div>");
         row.append(progress);
