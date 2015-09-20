@@ -128,7 +128,7 @@ $.FileDialog = function FileDialog(userOptions) {
                 loadedFiles.pop(idx);
             }
             row.fadeOut();
-            reader.abort();
+            try { reader.abort(); } catch(e) { }
         });
         row = $("<div class='row'></div>");
         row.append(progress);
@@ -182,7 +182,7 @@ $.FileDialog = function FileDialog(userOptions) {
     });
 
     modal.on("hidden.bs.modal", function() {
-        readers.forEach(function(reader) { reader.abort(); });
+        readers.forEach(function(reader) { try { reader.abort(); } catch(e) { } });
         if(!done) {
             var event = $.Event("cancel.bs.filedialog");
             modal.trigger(event);
