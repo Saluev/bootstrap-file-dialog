@@ -15,7 +15,7 @@ $.FileDialog = function FileDialog(userOptions) {
             "                <button type='button' class='close' data-dismiss='modal'>",
             "                    <span aria-hidden='true'>&times;</span>",
             "                    <span class='sr-only'>",
-                                     options.cancelButton,
+                                     options.cancel_button,
             "                    </span>",
             "                </button>",
             "                <h4 class='modal-title'>",
@@ -26,7 +26,7 @@ $.FileDialog = function FileDialog(userOptions) {
             "                <input type='file' />",
             "                <div class='bfd-dropfield'>",
             "                    <div class='bfd-dropfield-inner'>",
-                                     options.dragMessage,
+                                     options.drag_message,
             "                    </div>",
             "                </div>",
             "                <div class='container-fluid bfd-files'>",
@@ -34,11 +34,11 @@ $.FileDialog = function FileDialog(userOptions) {
             "            </div>",
             "            <div class='modal-footer'>",
             "                <button type='button' class='btn btn-primary bfd-ok'>",
-                                 options.okButton,
+                                 options.ok_button,
             "                </button>",
             "                <button type='button' class='btn btn-default bfd-cancel'",
             "                                data-dismiss='modal'>",
-                                 options.cancelButton,
+                                 options.cancel_button,
             "                </button>",
             "            </div>",
             "        </div>",
@@ -84,7 +84,7 @@ $.FileDialog = function FileDialog(userOptions) {
             }
             progressBar.parent().html([
                 "<div class='bg-danger bfd-error-message'>",
-                    options.errorMessage,
+                    options.error_message,
                 "</div>"
             ].join("\n"));
         };
@@ -121,7 +121,7 @@ $.FileDialog = function FileDialog(userOptions) {
             "container": "body",
             "html": true,
             "placement": "top",
-            "title": options.removeMessage
+            "title": options.remove_message
         }).on("click.bfd", function() {
             var idx = loadedFiles.indexOf(f);
             if(idx >= 0) {
@@ -198,14 +198,14 @@ $.FileDialog = function FileDialog(userOptions) {
 
 $.FileDialog.defaults = {
     "accept": "*", /* e.g. 'image/*' */
-    "cancelButton": "Close",
-    "dragMessage": "Drop files here",
+    "cancel_button": "Close",
+    "drag_message": "Drop files here",
     "dropheight": 400,
-    "errorMessage": "An error occured while loading file",
+    "error_message": "An error occured while loading file",
     "multiple": true,
-    "okButton": "OK",
+    "ok_button": "OK",
     "readAs": "DataURL", /* possible choices: BinaryString, Text, DataURL, ArrayBuffer, */
-    "removeMessage": "Remove&nbsp;file",
+    "remove_message": "Remove&nbsp;file",
     "title": "Load file(s)"
 };
 

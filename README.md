@@ -38,6 +38,7 @@ Auxiliary string options for internationalization:
 * `drag_message`: the central text of drop zone. Default: `Drop files here`.
 * `error_message`: the message displayed on files that could not be loaded.
     Default: `An error occured while loading file`.
+* `remove_message`: popup hint to remove file button. Default: `Remove file`.
 
 To handle files choice when done, bind an event handler:
 
